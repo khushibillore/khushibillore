@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khushi Billore | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4a90e2;
+      --background: #f8f9fa;
+      --foreground: #333;
+      --card: white;
+    }
+    body.dark-mode {
+      --primary: #90caf9;
+      --background: #121212;
+      --foreground: #f1f1f1;
+      --card: #1f1f1f;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: var(--background);
+      color: var(--foreground);
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav {
+      background: var(--card);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 2rem;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 0.5rem;
+    }
+    ul li, .project p, .testimonial p {
+      margin-bottom: 0.8rem;
+    }
+    .project, .testimonial {
+      margin-bottom: 2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .testimonial {
+      min-width: 300px;
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 3rem;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #357ABD;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <header>
+    <h1>Khushi Billore</h1>
+    <p>Frontend Developer | AI Tools Enthusiast | Computer Management PG Student</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web development enthusiast currently pursuing a Master’s in Computer Management. With experience in HTML, CSS, AI tools like ChatGPT, and web development internships, I aim to build user-friendly, modern websites while constantly learning and exploring new technologies.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>HTML, CSS</li>
+      <li>Basic JavaScript, Python, C/C++</li>
+      <li>Web Designing (MKCL Certificate)</li>
+      <li>AI Tools (Be10x, ChatGPT)</li>
+      <li>MS Office</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>🎓 Master’s in Computer Management (Pursuing) – Dr. Ambedkar Institute, Nagpur</li>
+      <li>🎓 Bachelor of Science (2019–2021) – Bhalerao Science College, Saoner</li>
+      <li>🎓 HSC (2017–2019) – Saraswat Jr. College, Saoner</li>
+      <li>🎓 SSC (2016–2017) – St. Joseph’s Convent High School, Kamptee</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <strong>Makeup Hub / Studio</strong>
+      <p>Developed a mini project for booking and showcasing makeup services. Designed using HTML/CSS and focused on responsiveness.</p>
+    </div>
+    <div class="project">
+      <strong>Portfolio Website</strong>
+      <p>This very website – created to showcase my profile, skills, and projects.</p>
+    </div>
+    <a class="button" href="Khushi_Billore_Resume.pdf" download>Download My Resume</a>
+  </section>
+
+  <section id="gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1">
+      <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2">
+      <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3">
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="slider">
+      <div class="testimonial">
+        <p>"Khushi is very dedicated and creative. She contributed wonderfully to our web project during her internship." – Supervisor, Grantley Edutech</p>
+      </div>
+      <div class="testimonial">
+        <p>"A quick learner and a problem solver! Loved her enthusiasm in every team discussion." – Mentor, CMGC Group</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:khushibillore7@gmail.com">khushibillore7@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/khushi-billore0704" target="_blank">khushi-billore0704</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Khushi Billore | Made with 💙 by Me
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
